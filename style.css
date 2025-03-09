@@ -1,0 +1,32 @@
+/* Estilo para el enlace convertido en botón */
+.enlace-boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745; /* Color verde */
+    color: white; /* Color del texto */
+    text-align: center;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave para el hover */
+  }
+  
+  /* Efecto al pasar el ratón (hover) */
+  .enlace-boton:hover {
+    background-color: #218838; /* Verde más oscuro para el hover */
+    transform: scale(1.05); /* Ligeramente agrandado */
+  }
+
+/* Estilo para el botón de enlace en categorias.html */
+.enlace-boton {
+    background-color: #3498db; /* Color azul */
+    padding: 10px 15px; /* Espaciado */
+    border-radius: 5px; /* Bordes redondeados */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.enlace-boton:hover {
+    background-color: #2980b9; /* Color más oscuro al pasar el ratón */
+}

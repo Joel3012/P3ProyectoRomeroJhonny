@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro - Aventura Magia Park</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente divertida */
+            background: url('Fondo/Fondo Aventura Magica Park .jpg') no-repeat center center fixed; /* Fondo temático */
+            background-size: cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centrar verticalmente */
+            align-items: center;
+            position: relative; /* Para posicionar elementos absolutos */
+        }
+
+        .logo-container {
+            position: absolute; /* Posición absoluta para el logo */
+            top: 20px; /* Espacio desde la parte superior */
+            left: 20px; /* Espacio desde la izquierda */
+        }
+
+        .logo {
+            height: 150px; /* Aumentar la altura del logo */
+        }
+
+        .button-container {
+            position: absolute; /* Posición absoluta para los botones */
+            top: 20px; /* Espacio desde la parte superior */
+            right: 20px; /* Espacio desde la derecha */
+        }
+
+        .button-container a {
+            padding: 15px 25px; /* Aumentar el espaciado interno de los botones */
+            font-size: 1.2em; /* Aumentar el tamaño de fuente de los botones */
+            background: rgba(255, 204, 0, 0.75); /* Color dorado con 75% de transparencia */
+            color: #333; /* Color del texto */
+            border-radius: 10px; /* Bordes redondeados */
+            transition: background 0.3s, transform 0.2s, color 0.3s; /* Transiciones suaves */
+            text-decoration: none; /* Sin subrayado */
+            margin-left: 10px; /* Espacio a la izquierda de los botones */
+        }
+
+        .button-container a:hover {
+            background: rgba(230, 184, 0, 0.85); /* Color más oscuro con más opacidad al pasar el ratón */
+            transform: scale(1.05); /* Ligeramente agrandado */
+            color: #fff; /* Cambiar color del texto al pasar el ratón */
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+            border-radius: 15px; /* Bordes redondeados */
+            padding: 30px; /* Espaciado interno aumentado */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+            margin-bottom: 20px; /* Espacio debajo del contenido */
+            text-align: center; /* Centrar el texto */
+            position: relative; /* Posición relativa para el contenido */
+            width: 90%; /* Ancho del formulario */
+            max-width: 600px; /* Ancho máximo del formulario */
+        }
+
+        h1 {
+            margin: 0; /* Sin margen */
+            font-size: 3em; /* Tamaño de fuente más grande */
+            color: #2c3e50; /* Color oscuro que combina con el azul */
+            text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7); /* Sombra para el texto */
+        }
+
+        label {
+            font-size: 1.2em; /* Tamaño de fuente para las etiquetas */
+            color: #333; /* Color de las etiquetas */
+            display: block; /* Mostrar como bloque */
+            margin: 15px 0 5px; /* Margen para las etiquetas */
+        }
+
+        input, select {
+            width: 100%; /* Ancho completo */
+            padding: 12px; /* Espaciado interno */
+            margin-bottom: 20px; /* Espacio inferior */
+            border-radius: 10px; /* Bordes redondeados */
+            border: 2px solid #ffcc00; /* Borde dorado */
+            background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+            font-size: 1em; /* Tamaño de fuente */
+            transition: border 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+        }
+
+        input:focus, select:focus {
+            border: 2px solid #2980b9; /* Borde azul al enfocar */
+            box-shadow: 0 0 10px rgba(41, 128, 185, 0.5); /* Sombra azul al enfocar */
+            outline: none; /* Sin contorno */
+        }
+
+        button {
+            padding: 10px 20px; /* Espaciado interno */
+            font-size: 1.2em; /* Tamaño de fuente */
+            background: rgba(255, 204, 0, 0.75); /* Color dorado con 75% de transparencia */
+            color: #333; /* Color del texto */
+            border: none; /* Sin borde */
+            border-radius: 10px; /* Bordes redondeados */
+            cursor: pointer; /* Cambiar cursor */
+            transition: background 0.3s, transform 0.2s; /* Transición suave */
+        }
+
+        button:hover {
+            background: rgba(230, 184, 0, 0.85); /* Color más oscuro al pasar el ratón */
+            transform: scale(1.05); /* Ligeramente agrandado */
+        }
+
+        .login-prompt {
+            margin-top: 20px; /* Espacio superior */
+            font-size: 1.2em; /* Tamaño de fuente */
+            color: #333; /* Color del texto */
+        }
+
+        .login-prompt a {
+            color: #2980b9; /* Color azul para el enlace */
+            text-decoration: underline; /* Subrayar el enlace */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <img src="Fondo/Logo.jpeg" alt="Logo Aventura Magia Park" class="logo"> <!-- Ruta actualizada del logo -->
+    </div>
+
+    <div class="button-container">
+        <a href="#">Boletira</a>
+        <a href="#">Juegos</a>
+        <a href="#">Carrito</a>
+        <a href="categorias.html">Iniciar Sesión</a>
+        <a href="#">Registrarse</a>
+    </div>
+
+    <div class="content">
+        <h1>Registro</h1>
+        <form action="registro.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <div style="display: flex; gap: 10px;">
+                <select id="dia" name="dia" required>
+                    <option value="">Día</option>
+                    <?php for ($i = 1; $i <= 30; $i++): ?>
+                        <option value="<?= $i ?>"><?= $i ?></option>
+                    <?php endfor; ?>
+                </select>
+                <select id="mes" name="mes" required>
+                    <option value="">Mes</option>
+                    <?php
+                    $meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+                    foreach ($meses as $index => $mes) {
+                        echo "<option value='" . ($index + 1) . "'>$mes</option>";
+                    }
+                    ?>
+                </select>
+                <select id="anio" name="anio" required>
+                    <option value="">Año</option>
+                    <?php for ($i = date("Y"); $i >= 1950; $i--): ?>
+                        <option value="<?= $i ?>"><?= $i ?></option>
+                    <?php endfor; ?>
+                </select>
+            </div>
+
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero" required>
+                <option value="">Selecciona</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password_register">Contraseña:</label>
+            <input type="password" id="password_register" name="password_register" required>
+
+            <button type="submit">Registrarse</button>
+        </form>
+
+        <button type="button" onclick="window.location.href='index.html'">Regresar a la Página Principal</button>
+
+        <div class="login-prompt">
+            <p>¿Ya tienes cuenta? <a href="categorias.html">Inicia sesión aquí</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
